@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="regform-section">
+        <div class="col-md-8 offset-2">
+            <div><h2>Registration Form</h2></div>
+            <!--Form for contact us-->
+                <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                    <label>                            
+                        <input type="text" formControlName="firstName" placeholder="Enter First Name">                          
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <label>                        
+                        <input type="text" formControlName="lastName" placeholder="Enter Last Name">
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <label>                        
+                        <input type="text" formControlName="email" placeholder="Enter emailID">
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <label>                        
+                        <input type="text" formControlName="userName" placeholder="Enter User Name">
+                      </label>
+                    </div>
+                     <div class="form-group">
+                      <label>                        
+                        <input type="password" formControlName="password" placeholder="Enter password (Minimum 7 letters)">
+                      </label>
+                     </div>            
+                     <div formGroupName="qualification">
+                        <h3>Qualification:</h3>
+                      <div class="form-group">
+                        <label>                          
+                          <input type="text" formControlName="education" placeholder="Education">
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label>                          
+                          <input type="text" formControlName="college" placeholder="College Name">
+                        </label>
+                       </div>
+                       <div class="form-group">
+                        <label>                          
+                          <input type="text" formControlName="university" placeholder="University Name">
+                        </label>
+                      </div>
+                      </div>                 
+                      <div formGroupName="address">
+                        <h3>Address Details:</h3>
+                      <div class="form-group">
+                        <label>                          
+                          <input type="text" formControlName="add1" placeholder="Address Line 1">
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label>                          
+                          <input type="text" formControlName="add2" placeholder="Address Line 2">
+                        </label>
+                        </div>
+                      <div class="form-group">
+                        <label>
+                          <input type="text" formControlName="city" placeholder="Enter city">
+                        </label>
+                      </div>
+                      <div class="form-group">                       
+                        <label>                          
+                          <input type="text" formControlName="state" placeholder="Enter State">
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label>                          
+                          <input type="text" formControlName="country" placeholder="Enter Country">
+                        </label>
+                        </div>
+                      </div>
+                      <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+                        <h4>
+                          Form Status: {{ profileForm.status }}
+                        </h4>                           
+                </form>                               
+               <!--Form ends here--> 
+            </div>
+        </div>
+      </div>
